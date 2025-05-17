@@ -8,14 +8,34 @@ public class BosKarakter : MonoBehaviour
     public NavMeshAgent _Navmesh;
     public Animator _Animator;
     public GameObject Target;
+    public GameObject Saldir_Hedefi;
     public GameManager _GameManager;
+    public GameObject Karakter;
 
     private bool Temasvar;
 
     void LateUpdate()
     {
-        if (Temasvar && Target != null && _Navmesh != null)
-            _Navmesh.SetDestination(Target.transform.position);
+        //if (Temasvar && Target != null && _Navmesh != null)
+        //    _Navmesh.SetDestination(Target.transform.position);
+    }
+    void Update()
+    {
+        //if (Temasvar && Target != null && _Navmesh != null)
+        //    _Navmesh.SetDestination(Target.transform.position);
+
+        if (Temasvar && Target != null && _Navmesh != null) 
+        {
+            if (_GameManager.SonaGeldikmi)
+            {
+                _Navmesh.SetDestination(Saldir_Hedefi.transform.position);
+                _Navmesh.isStopped = false;
+            }
+            else
+            {
+                _Navmesh.SetDestination(Target.transform.position);
+            }
+        }
     }
 
     Vector3 PozisyonVer()
@@ -29,6 +49,8 @@ public class BosKarakter : MonoBehaviour
         {
             if (gameObject.CompareTag("BosKarakter"))
             {
+                transform.SetParent(Karakter.transform);
+
                 MaterialDegistirveAnimasyonTetikle();
 
                 var audio = GetComponent<AudioSource>();

@@ -6,13 +6,22 @@ public class Alt_karakter : MonoBehaviour
     private NavMeshAgent _Navmesh;
     public GameManager _GameManager;
     public GameObject Target;
-    
+    public GameObject Saldir_Hedefi;
+    private Animator _Animator;
+
     private float gecenzaman = 0.00f;
     private float beklemesüresi = 1f;
 
+    private void Awake()
+    {
+        _Animator = GetComponent<Animator>();
+    }
     void Start()
     {
         _Navmesh = GetComponent<NavMeshAgent>();
+
+        //if (_Animator != null)
+        //    _Animator.SetBool("Saldir", true);
 
         if (Target == null)
             Debug.LogError("Alt_karakter: Target atanmadı!");
@@ -23,8 +32,24 @@ public class Alt_karakter : MonoBehaviour
 
     void LateUpdate()
     {
-        if (Target != null)
-            _Navmesh.SetDestination(Target.transform.position);
+        //if (Target != null)
+        //    _Navmesh.SetDestination(Target.transform.position);
+    }
+    void Update()
+    {
+        if (_Animator != null)
+            _Animator.SetBool("Saldir", true);
+
+        if (_GameManager.SonaGeldikmi)
+        {
+            _Navmesh.SetDestination(Saldir_Hedefi.transform.position);
+            _Navmesh.isStopped = false;
+        }
+        else
+        {
+            if (Target != null)
+                _Navmesh.SetDestination(Target.transform.position);
+        }
     }
 
     Vector3 PozisyonVer()

@@ -268,7 +268,6 @@ public class GameManager : MonoBehaviour
 
                 if (KacBossOlsun > 0 && AnlikKarakterSayisi == 1)
                 {
-                    _ReklamYonetimi.RequestInterstitial();
                     altin = Random.Range(kaybedilenMinAltin, kaybedilenMaxAltin);
                     elmas = Random.Range(kaybedilenMinElmas, kaybedilenMaxElmas);
 
@@ -283,12 +282,13 @@ public class GameManager : MonoBehaviour
                     int deger = kazanc * 2;
                     kaybettinReklamMiktari.text = deger.ToString();
 
-                    islemPanelleri[3]?.SetActive(true);
+                    //islemPanelleri[3]?.SetActive(true);
+                    StartCoroutine(OpenAsyncPanel(islemPanelleri[3]));
+                    _ReklamYonetimi.RequestInterstitial();
                     SavasDurumuCagirildi = true;
                 }
                 else if (KacBossOlsun <= 0 && AnlikKarakterSayisi > 0)
                 {
-                    _ReklamYonetimi.RequestInterstitial();
                     altin = Random.Range(kazanilanMinAltin, kazanilanMaxAltin);
                     elmas = Random.Range(kazanilanMinElmas, kazanilanMaxElmas);
 
@@ -308,7 +308,9 @@ public class GameManager : MonoBehaviour
                     
                     Debug.Log(_BellekYonetim.VeriOku_i("SonLevel"));
 
-                    islemPanelleri[2]?.SetActive(true);
+                    //islemPanelleri[2]?.SetActive(true);
+                    StartCoroutine(OpenAsyncPanel(islemPanelleri[2]));
+                    _ReklamYonetimi.RequestInterstitial();
                     SavasDurumuCagirildi = true;
                 }
             }
@@ -329,7 +331,6 @@ public class GameManager : MonoBehaviour
 
                 if (KacDusmanOlsun > 0 && AnlikKarakterSayisi == 1)
                 {
-                    _ReklamYonetimi.RequestInterstitial();
                     Debug.Log("Kaybettik");
                     altin = Random.Range(kaybedilenMinAltin, kaybedilenMaxAltin);
                     elmas = Random.Range(kaybedilenMinElmas, kaybedilenMaxElmas);
@@ -345,12 +346,13 @@ public class GameManager : MonoBehaviour
                     int deger = kazanc * 2;
                     kaybettinReklamMiktari.text = deger.ToString();
 
-                    islemPanelleri[3]?.SetActive(true);
+                    //islemPanelleri[3]?.SetActive(true);
+                    StartCoroutine(OpenAsyncPanel(islemPanelleri[3]));
+                    _ReklamYonetimi.RequestInterstitial();
                     SavasDurumuCagirildi = true;
                 }
                 else if (KacDusmanOlsun <= 0 && AnlikKarakterSayisi > 0)
                 {
-                    _ReklamYonetimi.RequestInterstitial();
                     Debug.Log("Kazandık");
                     altin = Random.Range(kazanilanMinAltin, kazanilanMaxAltin);
                     elmas = Random.Range(kazanilanMinElmas, kazanilanMaxElmas);
@@ -371,7 +373,9 @@ public class GameManager : MonoBehaviour
                     
                     Debug.Log(_BellekYonetim.VeriOku_i("SonLevel"));
 
-                    islemPanelleri[2]?.SetActive(true);
+                    //islemPanelleri[2]?.SetActive(true);
+                    StartCoroutine(OpenAsyncPanel(islemPanelleri[2]));
+                    _ReklamYonetimi.RequestInterstitial();
                     SavasDurumuCagirildi = true;
                 }
             }
@@ -643,5 +647,11 @@ public class GameManager : MonoBehaviour
             kazanilanAltin.text = (SonParaKazanci * 2).ToString();
             kazanilanAltin.text = SonParaKazanci.ToString();
         });
+    }
+
+    IEnumerator OpenAsyncPanel(GameObject panel)
+    {
+        yield return new WaitForSeconds(.5f);
+        panel?.SetActive(true);
     }
 }

@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.AI;
+using System.Collections;
 
 public class Karakter : MonoBehaviour
 {
@@ -36,7 +37,6 @@ public class Karakter : MonoBehaviour
             _Slider.maxValue = Fark;
         }
     }
-
     private void Update()
     {
         if (!OrtakManager.Instance.oyunBasladimi)
@@ -58,6 +58,9 @@ public class Karakter : MonoBehaviour
         {
             if (Gidecegiyer != null)
             {
+                agent.speed = 3;
+                agent.angularSpeed = 1;
+                agent.acceleration = 10;
                 agent.SetDestination(Gidecegiyer.transform.position);
             }
 

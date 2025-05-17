@@ -6,26 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="f79b578f-5b3e-48e7-8f94-aff768d118f8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RunRush/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RunRush/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animasyonlar/Karakter.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animasyonlar/Karakter.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Engeller/YeniEngeller/Balyoz.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Engeller/YeniEngeller/Balyoz.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Engeller/YeniEngeller/BalyozOrta.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Engeller/YeniEngeller/BalyozOrta.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Engeller/YeniEngeller/Donenİgne.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Engeller/YeniEngeller/Donenİgne.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Engeller/YeniEngeller/Donenİgne.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Engeller/YeniEngeller/Donenİgne.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Leveller/Level1.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Leveller/Level1.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Leveller/Level1/NavMesh.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Leveller/Level1/NavMesh.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Leveller/Level2.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Leveller/Level2.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Leveller/OzelDers.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Leveller/OzelDers.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AnaMenu_Manager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AnaMenu_Manager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ayarlar_Manager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ayarlar_Manager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Alt_karakter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Alt_karakter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BosKarakter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BosKarakter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Karakter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Karakter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Kutuphane.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Kutuphane.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Özel Ders Kodlar/OrtakManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Özel Ders Kodlar/OrtakManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Özel Ders Kodlar/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Özel Ders Kodlar/SoundManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,6 +28,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelOlusturma.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelOlusturmaEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Özel Ders Kodlar/OrtakManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Özel Ders Kodlar/SoundManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -144,7 +129,9 @@
       <workItem from="1747049580043" duration="2853000" />
       <workItem from="1747060579870" duration="14971000" />
       <workItem from="1747078725383" duration="1665000" />
-      <workItem from="1747080477613" duration="1043000" />
+      <workItem from="1747080477613" duration="2390000" />
+      <workItem from="1747476983774" duration="147000" />
+      <workItem from="1747486291263" duration="872000" />
     </task>
     <servers />
   </component>
@@ -177,19 +164,6 @@
           <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="3" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs</url>
-          <line>317</line>
-          <properties documentPath="C:\Users\PC-Bilgisayar\Documents\GitHub\RunRush\Assets\Scripts\GameManager.cs" containingFunctionPresentation="Method 'SavasDurumu'">
-            <startOffsets>
-              <option value="10291" />
-            </startOffsets>
-            <endOffsets>
-              <option value="10372" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
