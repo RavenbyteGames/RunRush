@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+  <ui:VisualElement>
+    <ui:Button name="LevelEkle" text="Level Ekle" />
+    <ui:Button name="LevelSil" text="Level Sil" />
+    <ui:Foldout name="Leveller" text="Level Listesi" />
+  </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Button text="Level Oluştur" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LevelEkle" style="-unity-text-align: middle-center; text-overflow: clip; white-space: nowrap; left: auto; position: absolute; bottom: 6px; height: 70px; right: 313px; width: 140px; top: 690px;" />
+    <ui:Button text="Level Sil" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LevelSil" style="-unity-text-align: middle-center; text-overflow: clip; white-space: nowrap; left: auto; position: absolute; bottom: 6px; height: 70px; right: 165px; width: 140px; top: 690px;" />
+    <ui:Foldout text="Leveller" name="Leveller" style="top: 12px; width: 234px; position: absolute; left: 6px; height: 139px;" />
+    <ui:VisualElement style="flex-grow: 1; width: 319px; height: 545px; top: 55px; left: 253px; position: absolute;">
+        <ui:GroupBox style="height: 573px;">
+            <ui:Button text="Leveli Düzenle" parse-escape-sequences="true" display-tooltip-when-elided="true" name="leveliduzenle" style="height: 64px;" />
+        </ui:GroupBox>
+    </ui:VisualElement>
+    <ui:Button text="Level Sil" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LevelSil" style="-unity-text-align: middle-center; text-overflow: clip; white-space: nowrap; position: absolute; right: 19px; bottom: 6px; height: 70px; width: 139px; top: 690px;" />
+</ui:UXML>

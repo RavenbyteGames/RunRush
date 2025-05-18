@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Button text="Balyoz" parse-escape-sequences="true" display-tooltip-when-elided="true" name="balyoz" />
+    <ui:Button text="Dikenli Tel" parse-escape-sequences="true" display-tooltip-when-elided="true" name="dikenlitel" />
+    <ui:Button text="Orta Balyoz" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ortabalyoz" />
+    <ui:Button text="Sayısal Bloklar" parse-escape-sequences="true" display-tooltip-when-elided="true" name="sayisalbloklar" />
+    <ui:Button text="Sahneyi Temizle" parse-escape-sequences="true" display-tooltip-when-elided="true" name="removeall" />
+</ui:UXML>
