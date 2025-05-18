@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: a42a11f2e69092d49b9594321024a152
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - m_ViewDataDictionary: {instanceID: 0}
+  - treeAsset: {fileID: 9197481963319205126, guid: b70156d3f4cc850478ed4cdfce2d122e, type: 3}
+  - levelOlusturma: {fileID: 11400000, guid: 04de2061219b2054898cddc0af964afc, type: 2}
+  - balyozobj: {fileID: 9199847523208154558, guid: 1ac08b296c752bd4a8d552d2bc3769f0, type: 3}
+  - dikenlitelobj: {fileID: 8911030871546846930, guid: 8b7ce0a7f539b764f83bd8f43a3916df, type: 3}
+  - ortabalyozobj: {fileID: 4341855933435951258, guid: 185d75579a4c74b4e9d99e369a544f1b, type: 3}
+  - sayisalbloklarobj: {fileID: 6225694260703596447, guid: a4a3653fa38a6614aa993395d7e87bb9, type: 3}
+  - boskarakterobj: {fileID: 4615577243550059780, guid: 86ca6f0215b5dee40ba8d1c093fc18c8, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

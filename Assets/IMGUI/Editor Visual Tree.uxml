@@ -1,11 +1,20 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:Button text="Level Oluştur" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LevelEkle" style="-unity-text-align: middle-center; text-overflow: clip; white-space: nowrap; left: auto; position: absolute; bottom: 6px; height: 70px; right: 313px; width: 140px; top: 690px;" />
-    <ui:Button text="Level Sil" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LevelSil" style="-unity-text-align: middle-center; text-overflow: clip; white-space: nowrap; left: auto; position: absolute; bottom: 6px; height: 70px; right: 165px; width: 140px; top: 690px;" />
-    <ui:Foldout text="Leveller" name="Leveller" style="top: 12px; width: 234px; position: absolute; left: 6px; height: 139px;" />
-    <ui:VisualElement style="flex-grow: 1; width: 319px; height: 545px; top: 55px; left: 253px; position: absolute;">
-        <ui:GroupBox style="height: 573px;">
-            <ui:Button text="Leveli Düzenle" parse-escape-sequences="true" display-tooltip-when-elided="true" name="leveliduzenle" style="height: 64px;" />
+    <ui:Button text="Level Oluştur" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LevelEkle" style="-unity-text-align: middle-center; text-overflow: clip; white-space: nowrap; left: 5px; position: absolute; bottom: 7px; height: 70px; top: auto; width: 140px;" />
+    <ui:Button text="Level Sil" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LevelSil" style="-unity-text-align: middle-center; text-overflow: clip; white-space: nowrap; left: 157px; position: absolute; bottom: 6px; height: 70px; top: auto; width: 140px;" />
+    <ui:Foldout text="Leveller" name="Leveller" style="top: 66px; width: 185px; position: absolute; left: 6px; height: 139px;" />
+    <ui:VisualElement style="flex-grow: 1; width: 271px; height: 637px; top: 62px; left: 198px; position: absolute;">
+        <ui:GroupBox style="height: 559px; position: absolute; width: 260px; left: 6px; top: 16px;">
+            <ui:Label text="Level Index" parse-escape-sequences="true" display-tooltip-when-elided="true" name="levelname" style="-unity-text-align: upper-center; position: absolute; top: -17px; left: 42px; width: 179px; bottom: 545px;" />
+            <ui:Button text="Balyoz" parse-escape-sequences="true" display-tooltip-when-elided="true" name="balyoz" style="height: 40px;" />
+            <ui:Button text="Dikenli Tel" parse-escape-sequences="true" display-tooltip-when-elided="true" name="dikenlitel" style="height: 40px;" />
+            <ui:Button text="Orta Balyoz" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ortabalyoz" style="height: 40px;" />
+            <ui:Button text="Sayısal Bloklar" parse-escape-sequences="true" display-tooltip-when-elided="true" name="sayisalbloklar" style="height: 40px;" />
+            <ui:Button text="Boş Karakter" parse-escape-sequences="true" display-tooltip-when-elided="true" name="boskarakterler" style="height: 40px;" />
+            <ui:Button text="Sahneyi Temizle" parse-escape-sequences="true" display-tooltip-when-elided="true" name="removeall" style="height: 40px;" />
+            <ui:IntegerField label="Düşman Sayısı" value="0" name="dusmansayisi" />
+            <ui:IntegerField label="Boss Sayısı" value="0" name="bosssayisi" />
+            <ui:Toggle label="Boss Level" name="bosslevel" />
         </ui:GroupBox>
     </ui:VisualElement>
-    <ui:Button text="Level Sil" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LevelSil" style="-unity-text-align: middle-center; text-overflow: clip; white-space: nowrap; position: absolute; right: 19px; bottom: 6px; height: 70px; width: 139px; top: 690px;" />
+    <ui:Button text="Level Düzenle" parse-escape-sequences="true" display-tooltip-when-elided="true" name="levelduzenle" style="-unity-text-align: middle-center; text-overflow: clip; white-space: nowrap; position: absolute; bottom: 6px; height: 70px; top: auto; left: 309px; width: 139px;" />
 </ui:UXML>

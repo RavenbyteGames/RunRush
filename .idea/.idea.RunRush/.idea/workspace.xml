@@ -6,13 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="f79b578f-5b3e-48e7-8f94-aff768d118f8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RunRush/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RunRush/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Level.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Level.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IMGUI/Editor Visual Tree.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IMGUI/Editor Visual Tree.uxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IMGUI/Level.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IMGUI/Level.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IMGUI/LevelOlusturmaEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IMGUI/LevelOlusturmaEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IMGUI/LevelOlusturmaEditor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IMGUI/LevelOlusturmaEditor.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IMGUI/Leveller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IMGUI/Leveller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Engeller/YeniEngeller/Donenİgne.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Engeller/YeniEngeller/Donenİgne.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelOlusturma.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelOlusturma.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelOlusturmaEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelOlusturmaEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +25,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b5247cd9cd63447eae464b6edbbfda599a00/ca/a8c44b32/MobileAds.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/IMGUI/LevelYukleyici.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/IMGUI/LevellerEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Alt_karakter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GunlukOdul_Manager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -134,6 +136,7 @@
       <workItem from="1747476983774" duration="147000" />
       <workItem from="1747486291263" duration="872000" />
       <workItem from="1747508756848" duration="14233000" />
+      <workItem from="1747562078051" duration="8301000" />
     </task>
     <servers />
   </component>

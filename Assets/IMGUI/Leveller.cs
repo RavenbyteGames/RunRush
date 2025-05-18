@@ -15,6 +15,10 @@ public class Leveller : ScriptableObject
         public Vector3 position;
         public Quaternion rotation;
     }
+    
+    public int kacDusman;
+    public int kacBoss;
+    public bool bossLevel;
 
     public List<PrefabData> prefabList = new List<PrefabData>();
     

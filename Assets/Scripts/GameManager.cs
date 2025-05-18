@@ -11,6 +11,8 @@ using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
 {
+    public LevelYukleyici levelYukleyici;
+    
     public static GameManager Instance;
     
     public static int AnlikKarakterSayisi = 1;
