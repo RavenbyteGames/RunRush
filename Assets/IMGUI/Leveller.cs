@@ -14,11 +14,14 @@ public class Leveller : ScriptableObject
         public GameObject prefab;
         public Vector3 position;
         public Quaternion rotation;
+        public int dusmansayisi;
+        public int bosssayisi;
+        public bool bosslevel;
     }
     
-    public int kacDusman;
-    public int kacBoss;
-    public bool bossLevel;
+    public int dusmansayisi;
+    public int bosssayisi;
+    public bool bosslevel;
 
     public List<PrefabData> prefabList = new List<PrefabData>();
     

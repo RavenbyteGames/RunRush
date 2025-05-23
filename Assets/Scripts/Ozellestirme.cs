@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class Ozellestirme : MonoBehaviour
 {
+   
+    
     public TextMeshProUGUI ParaText;
     public TextMeshProUGUI ElmasText;
     
@@ -78,6 +80,7 @@ public class Ozellestirme : MonoBehaviour
         
         DilTercihiYonetimi();
     }
+    
     public void DilTercihiYonetimi()
     {
         if (_BellekYonetim.VeriOku_s("Dil") == "TR")

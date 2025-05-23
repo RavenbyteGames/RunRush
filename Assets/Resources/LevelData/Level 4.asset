@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce277c9ddc467164894e1eeecc14c9a3, type: 3}
+  m_Name: Level 4
+  m_EditorClassIdentifier: 
+  Note: 
+  dusmansayisi: 4
+  bosssayisi: 0
+  bosslevel: 0
+  prefabList:
+  - prefab: {fileID: 9199847523208154558, guid: 1ac08b296c752bd4a8d552d2bc3769f0, type: 3}
+    position: {x: 1.9710007, y: 0.16799927, z: 19.47924}
+    rotation: {x: -0, y: -1, z: -0, w: 0}
+    dusmansayisi: 0
+    bosssayisi: 0
+    bosslevel: 0
+  - prefab: {fileID: 4341855933435951258, guid: 185d75579a4c74b4e9d99e369a544f1b, type: 3}
+    position: {x: -0.0057029724, y: 0, z: 19.96924}
+    rotation: {x: -0, y: -0, z: -0, w: 1}
+    dusmansayisi: 0
+    bosssayisi: 0
+    bosslevel: 0
+  - prefab: {fileID: 8911030871546846930, guid: 8b7ce0a7f539b764f83bd8f43a3916df, type: 3}
+    position: {x: 0, y: 0, z: 17.339241}
+    rotation: {x: -0, y: -0, z: -0, w: 1}
+    dusmansayisi: 0
+    bosssayisi: 0
+    bosslevel: 0
+  - prefab: {fileID: 6225694260703596447, guid: a4a3653fa38a6614aa993395d7e87bb9, type: 3}
+    position: {x: 0, y: 0, z: 21.22924}
+    rotation: {x: -0, y: -0, z: -0, w: 1}
+    dusmansayisi: 0
+    bosssayisi: 0
+    bosslevel: 0

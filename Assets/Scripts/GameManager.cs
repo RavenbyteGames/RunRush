@@ -12,7 +12,7 @@ using Random = UnityEngine.Random;
 public class GameManager : MonoBehaviour
 {
     public LevelYukleyici levelYukleyici;
-    
+
     public static GameManager Instance;
     
     public static int AnlikKarakterSayisi = 1;
@@ -87,8 +87,30 @@ public class GameManager : MonoBehaviour
     private bool SavasDurumuCagirildi = false;
     private int SonParaKazanci;
 
+    private Leveller aktifLeveller;
+    public LevelOlusturma levelOlusturma;
+
     void Start()
     {
+        Debug.Log("Start");
+        int sonlevel = _BellekYonetim.VeriOku_i("SonLevel");
+        aktifLeveller = Resources.Load<Leveller>($"LevelData/Level {sonlevel}");
+
+        if (aktifLeveller != null)
+        {
+            KacDusmanOlsun = aktifLeveller.dusmansayisi;
+            KacBossOlsun = aktifLeveller.bosssayisi;
+            BossLevel = aktifLeveller.bosslevel;
+        }
+
+       /* KacDusmanOlsun = aktifLeveller.dusmansayisi;
+        KacBossOlsun = aktifLeveller.bosssayisi;
+        BossLevel = aktifLeveller.bosslevel;*/
+
+        Debug.Log("test");
+        Debug.Log("mest");
+        
+        
         DynamicGI.UpdateEnvironment();
 
         MobileAds.Initialize(initStatus => { Debug.Log("AdMob initialized."); });
@@ -154,6 +176,10 @@ public class GameManager : MonoBehaviour
         {
             _BellekYonetim.VeriKaydet_float("AltinCarpani", 1f);
         }
+        
+        TemizleVeLeveliYukle();
+        
+        Debug.Log("Son");
     }
 
     private void Update()
@@ -650,6 +676,41 @@ public class GameManager : MonoBehaviour
             kazanilanAltin.text = SonParaKazanci.ToString();
         });
     }
+    
+    void TemizleVeLeveliYukle()
+    {
+        GameObject spawnObj = GameObject.Find("SpawnObjeler");
+
+        if (spawnObj == null)
+        {
+            Debug.LogError("'SpawnObjeler' objesi sahnede bulunamadı.");
+            return;
+        }
+
+        // Önce sahneyi temizle
+        for (int i = spawnObj.transform.childCount - 1; i >= 0; i--)
+        {
+            Destroy(spawnObj.transform.GetChild(i).gameObject);
+        }
+
+        if (aktifLeveller == null || aktifLeveller.prefabList == null)
+        {
+            Debug.LogWarning("aktifLeveller null veya içinde prefab yok.");
+            return;
+        }
+
+        // Prefab'ları yeniden yükle
+        foreach (var p in aktifLeveller.prefabList)
+        {
+            if (p.prefab == null) continue;
+
+            GameObject go = Instantiate(p.prefab, p.position, p.rotation, spawnObj.transform);
+            go.name = p.prefab.name; // sahnede daha temiz görünmesi için isim ata
+        }
+
+        Debug.Log($"'{aktifLeveller.name}' level prefabları sahneye yüklendi.");
+    }
+
 
     IEnumerator OpenAsyncPanel(GameObject panel)
     {

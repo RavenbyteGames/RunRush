@@ -6,14 +6,22 @@
   <component name="ChangeListManager">
     <list default="true" id="f79b578f-5b3e-48e7-8f94-aff768d118f8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RunRush/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RunRush/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/IMGUI/Editor Visual Tree.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IMGUI/Editor Visual Tree.uxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/IMGUI/Level.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IMGUI/Level.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/IMGUI/LevelOlusturmaEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IMGUI/LevelOlusturmaEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/IMGUI/LevelOlusturmaEditor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IMGUI/LevelOlusturmaEditor.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IMGUI/LevelData/Level 1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IMGUI/LevelData/Level 1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IMGUI/LevelData/Level 2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IMGUI/LevelData/Level 2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IMGUI/LevelData/Level 3.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IMGUI/LevelData/Level 3.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IMGUI/LevelData/Level 4.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IMGUI/LevelData/Level 4.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/IMGUI/LevelEditorWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IMGUI/LevelEditorWindow.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/IMGUI/Leveller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/IMGUI/Leveller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Engeller/YeniEngeller/Donenİgne.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Engeller/YeniEngeller/Donenİgne.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Ozellestir.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Ozellestir.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ozellestirme.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ozellestirme.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,6 +145,7 @@
       <workItem from="1747486291263" duration="872000" />
       <workItem from="1747508756848" duration="14233000" />
       <workItem from="1747562078051" duration="8301000" />
+      <workItem from="1747595109037" duration="6092000" />
     </task>
     <servers />
   </component>

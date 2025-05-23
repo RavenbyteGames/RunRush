@@ -2,6 +2,9 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 using System.Collections.Generic;
+using UnityEngine.UI;
+using Button = UnityEngine.UIElements.Button;
+using Toggle = UnityEngine.UIElements.Toggle;
 
 public class LevelEditorWindow : EditorWindow
 {
@@ -20,6 +23,9 @@ public class LevelEditorWindow : EditorWindow
 
     private Button balyoz, dikenliTel, ortaBalyoz, sayisalBloklar, bosKarakterler;
     private Button levelOlustur, levelSil, removeAll, saveButton, loadSelectedBtn;
+
+    private IntegerField dusmansayisi, bosssayisi;
+    private Toggle bosslevel;
 
     public GameObject balyozobj;
     public GameObject dikenlitelobj;
@@ -82,6 +88,11 @@ public class LevelEditorWindow : EditorWindow
         sayisalBloklar = rootVisualElement.Q<Button>("sayisalbloklar");
         bosKarakterler = rootVisualElement.Q<Button>("boskarakterler");
         removeAll = rootVisualElement.Q<Button>("removeall");
+        
+        dusmansayisi = rootVisualElement.Q<IntegerField>("dusmansayisi");
+        bosssayisi = rootVisualElement.Q<IntegerField>("bossayisi");
+        
+        bosslevel = rootVisualElement.Q<Toggle>("bosslevel");
 
         balyoz?.RegisterCallback<ClickEvent>((_) => Spawn(balyozobj));
         dikenliTel?.RegisterCallback<ClickEvent>((_) => Spawn(dikenlitelobj));
@@ -115,9 +126,11 @@ public class LevelEditorWindow : EditorWindow
         var leveller = CreateInstance<Leveller>();
         leveller.name = name;
 
-        string path = $"Assets/IMGUI/LevelData/{name}.asset";
+        // ❗ Kaydetme yolunu Resources klasörüne al
+        string path = $"Assets/Resources/LevelData/{name}.asset";
         AssetDatabase.CreateAsset(leveller, path);
         AssetDatabase.SaveAssets();
+        AssetDatabase.Refresh(); // yeni dosyayı asset database'e tanıt
 
         levelOlusturma.levelList.Add(leveller);
         EditorUtility.SetDirty(levelOlusturma);
@@ -207,6 +220,10 @@ public class LevelEditorWindow : EditorWindow
             go.transform.position = p.position;
             go.transform.rotation = p.rotation;
         }
+        
+        dusmansayisi.value = aktifLeveller.dusmansayisi;
+        bosssayisi.value = aktifLeveller.bosssayisi;
+        bosslevel.value = aktifLeveller.bosslevel;
 
         Debug.Log($"'{name}' prefabları sahneye yüklendi.");
     }
@@ -252,6 +269,10 @@ public class LevelEditorWindow : EditorWindow
                 rotation = child.rotation
             });
         }
+        
+        aktifLeveller.dusmansayisi = dusmansayisi.value;
+        aktifLeveller.bosssayisi = bosssayisi.value;
+        aktifLeveller.bosslevel = bosslevel.value;
 
         EditorUtility.SetDirty(aktifLeveller);
         Debug.Log("Level kaydedildi.");
@@ -286,9 +307,12 @@ public class LevelEditorWindow : EditorWindow
             var source = PrefabUtility.GetCorrespondingObjectFromSource(child.gameObject);
             if (source == null) continue;
 
-            var existing = aktifLeveller.prefabList.Find(p => p.prefab == source);
+            var existing = aktifLeveller.prefabList.Find(p => 
+                p.prefab == source &&
+                p.position == child.position &&
+                p.rotation == child.rotation);
 
-            if (existing == null || existing.position != child.position || existing.rotation != child.rotation)
+            if (existing == null)
             {
                 changed = true;
             }
@@ -300,12 +324,20 @@ public class LevelEditorWindow : EditorWindow
                 rotation = child.rotation
             });
         }
-
-        if (changed)
+        
+        // Prefab listesi değiştiyse ve/veya inputlarda değişiklik varsa kaydet
+       /* if (changed || 
+            aktifLeveller.dusmansayisi != dusmansayisi.value ||
+            aktifLeveller.bosssayisi != bosssayisi.value ||
+            aktifLeveller.bosslevel != bosslevel.value)
         {
             aktifLeveller.prefabList = newList;
-            EditorUtility.SetDirty(aktifLeveller);
-            Debug.Log("Level otomatik kaydedildi.");
-        }
+            aktifLeveller.dusmansayisi = dusmansayisi.value;
+            aktifLeveller.bosssayisi = bosssayisi.value;
+            aktifLeveller.bosslevel = bosslevel.value;
+        }*/
+       
+       EditorUtility.SetDirty(aktifLeveller);
+       Debug.Log("Level otomatik kaydedildi.");
     }
 }

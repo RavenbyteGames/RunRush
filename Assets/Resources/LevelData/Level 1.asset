@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce277c9ddc467164894e1eeecc14c9a3, type: 3}
+  m_Name: Level 1
+  m_EditorClassIdentifier: 
+  Note: 
+  dusmansayisi: 1
+  bosssayisi: 0
+  bosslevel: 0
+  prefabList:
+  - prefab: {fileID: 9199847523208154558, guid: 1ac08b296c752bd4a8d552d2bc3769f0, type: 3}
+    position: {x: 1.9710007, y: 0.16799927, z: 15.72924}
+    rotation: {x: -0, y: -1, z: -0, w: 0}
+    dusmansayisi: 0
+    bosssayisi: 0
+    bosslevel: 0
+  - prefab: {fileID: 6225694260703596447, guid: a4a3653fa38a6614aa993395d7e87bb9, type: 3}
+    position: {x: 0, y: 0, z: 20.64924}
+    rotation: {x: -0, y: -0, z: -0, w: 1}
+    dusmansayisi: 0
+    bosssayisi: 0
+    bosslevel: 0
